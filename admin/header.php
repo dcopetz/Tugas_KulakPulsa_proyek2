@@ -15,25 +15,22 @@
 	<script type="text/javascript" src="../assets/js/jquery-ui/jquery-ui.js"></script>	
 </head>
 <body>
-	<div class="navbar navbar-default">
+	<nav class="navbar navbar-default">
 		<div class="container-fluid">
-			<div class="navbar-header">
-				<a href="http://www.malasngoding.com" class="navbar-brand">KULAK PULSA</a>
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
+			<div style="margin-top: 10px" class="navbar-header">
+				<a href="http://www.malasngoding.com" class="navbar-brand"><font size="6">KULAK PULSA</font></a>
 			</div>
 			<div class="collapse navbar-collapse">				
 				<ul class="nav navbar-nav navbar-right">
-					<li><a id="pesan_sedia" href="#" data-toggle="modal" data-target="#modalpesan"><span class='glyphicon glyphicon-comment'></span>  Pesan</a></li>
-					<li><a class="dropdown-toggle" data-toggle="dropdown" role="button" href="#">Hy , <?php echo $_SESSION['uname']  ?>&nbsp&nbsp<span class="glyphicon glyphicon-user"></span></a></li>
+					<li>
+						<a href="#"><font size="3px">Hy , <?php echo $_SESSION['uname']?>&nbsp&nbsp</font>
+						<img class="img-circle" alt="Cinque Terre" height="35" weight="30" src="foto/admin1.jpg">
+						</a>
+					</li>
 				</ul>
 			</div>
 		</div>
-	</div>
+	</nav>
 
 	<!-- modal input -->
 	<div id="modalpesan" class="modal fade">
@@ -61,28 +58,12 @@
 		</div>
 	</div>
 
+	<!-- right panel -->
 	<div class="col-md-2">
-		<div class="row">
-			<?php 
-			$use=$_SESSION['uname'];
-			$fo=mysqli_query($con,"select foto from admin where uname='$use'");
-			while($f=mysqli_fetch_array($fo)){
-				?>				
-
-				<div class="col-xs-6 col-md-12">
-					<a class="thumbnail">
-						<img class="img-responsive" src="foto/<?php echo $f['foto']; ?>">
-					</a>
-				</div>
-				<?php 
-			}
-			?>		
-		</div>
-
 		<div class="row"></div>
 		<ul class="nav nav-pills nav-stacked">
-			<li class="active"><a href="index.php"><span class="glyphicon glyphicon-home"></span>  Dashboard</a></li>	
-			<li><a href="barang.php"><span class="glyphicon glyphicon-briefcase"></span>  Data Pulsa</a></li>
+			<li class="active"><a href="index.php"><span class="glyphicon glyphicon-home"></span>  Dashboard</a></li>
+			<li><a href="data_pulsa.php"><span class="glyphicon glyphicon-briefcase"></span>  Data Pulsa</a></li>
 			<li><a href="ganti_foto.php"><span class="glyphicon glyphicon-picture"></span>  Ganti Foto</a></li>
 			<li><a href="ganti_pass.php"><span class="glyphicon glyphicon-lock"></span> Ganti Password</a></li>
 			<li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span>  Logout</a></li>			

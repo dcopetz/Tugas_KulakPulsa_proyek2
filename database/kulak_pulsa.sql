@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `hargapulsa`
+-- Database: `kulak_pulsa`
 --
 
 -- --------------------------------------------------------
@@ -31,7 +31,8 @@ SET time_zone = "+00:00";
 CREATE TABLE `admin` (
   `id_admin` int(11) NOT NULL,
   `usernameAdmin` varchar(45) NOT NULL,
-  `passwordAdmin` varchar(45) NOT NULL
+  `passwordAdmin` varchar(45) NOT NULL,
+  `foto` varchar(100) NOT NULL	
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
